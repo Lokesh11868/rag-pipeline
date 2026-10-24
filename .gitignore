@@ -1,0 +1,31 @@
+# Environment variables & secrets
+.env
+.env.local
+*.env
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Distribution and packaging
+build/
+dist/
+*.egg-info/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test reports & scratch
+scratch/
+.pytest_cache/

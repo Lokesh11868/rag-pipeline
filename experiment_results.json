@@ -1,0 +1,209 @@
+{
+  "chunk_size_experiment": {
+    "Small Chunks": {
+      "chunk_size": 100,
+      "overlap": 20,
+      "total_chunks": 51,
+      "avg_words": 98.6,
+      "queries": [
+        {
+          "query": "What are the four phases of TCP congestion control?",
+          "top_similarity": 0.6247,
+          "top_chunk_words": 100,
+          "preview": "host does not receive an acknowledgment for a transmitted segment before its calculated Retransmission Timeout (RTO) exp..."
+        },
+        {
+          "query": "What are the RFC 1918 private IPv4 address blocks?",
+          "top_similarity": 0.7041,
+          "top_chunk_words": 100,
+          "preview": "under RFC 1918. These private addresses are non-routable across the public Internet and must undergo Network Address Tra..."
+        },
+        {
+          "query": "How does OSPF calculate shortest paths and what algorithm is used?",
+          "top_similarity": 0.5925,
+          "top_chunk_words": 100,
+          "preview": "states and neighbor adjacencies. Each router compiles these LSAs into an identical Link-State Database (LSDB) and execut..."
+        }
+      ]
+    },
+    "Default Chunks": {
+      "chunk_size": 250,
+      "overlap": 50,
+      "total_chunks": 20,
+      "avg_words": 248.9,
+      "queries": [
+        {
+          "query": "What are the four phases of TCP congestion control?",
+          "top_similarity": 0.5944,
+          "top_chunk_words": 250,
+          "preview": "determining whether delivery involves guaranteed state tracking or low-overhead stateless transmission. The highest tier..."
+        },
+        {
+          "query": "What are the RFC 1918 private IPv4 address blocks?",
+          "top_similarity": 0.6863,
+          "top_chunk_words": 250,
+          "preview": "1). Thus, the number of assignable host interfaces on any subnet with h host bits is calculated as (2^h) - 2. To conserv..."
+        },
+        {
+          "query": "How does OSPF calculate shortest paths and what algorithm is used?",
+          "top_similarity": 0.5465,
+          "top_chunk_words": 250,
+          "preview": "direction). An illustrative example is the Routing Information Protocol (RIP). RIP relies on the Bellman-Ford algorithm ..."
+        }
+      ]
+    },
+    "Large Chunks": {
+      "chunk_size": 500,
+      "overlap": 100,
+      "total_chunks": 10,
+      "avg_words": 492.8,
+      "queries": [
+        {
+          "query": "What are the four phases of TCP congestion control?",
+          "top_similarity": 0.5657,
+          "top_chunk_words": 500,
+          "preview": "3 PDU is the packet. Layer 4 is the Transport Layer. It provides end-to-end host communication management, process-to-pr..."
+        },
+        {
+          "query": "What are the RFC 1918 private IPv4 address blocks?",
+          "top_similarity": 0.5567,
+          "top_chunk_words": 500,
+          "preview": "3 allows billions of disparate hosts to communicate systematically. The dominant logical addressing protocols are IPv4 a..."
+        },
+        {
+          "query": "How does OSPF calculate shortest paths and what algorithm is used?",
+          "top_similarity": 0.3575,
+          "top_chunk_words": 500,
+          "preview": "is the Border Gateway Protocol (BGP-4, RFC 4271). BGP is a path-vector protocol that routes traffic between autonomous s..."
+        }
+      ]
+    }
+  },
+  "grounding_results": {
+    "answerable": [
+      {
+        "id": "A1",
+        "question": "What are the four phases of TCP congestion control?",
+        "top_chunk_id": "chunk_007",
+        "top_similarity": 0.5944,
+        "expected_facts": [
+          "Slow Start",
+          "Congestion Avoidance",
+          "Fast Retransmit",
+          "Fast Recovery"
+        ],
+        "retrieved_context_preview": "determining whether delivery involves guaranteed state tracking or low-overhead stateless transmission. The highest tier is the Application Layer, which synthesizes the responsibilities of OSI Layers ",
+        "generated_answer": "[API KEY REQUIRED FOR LIVE GENERATION - Retrieved context verified below]",
+        "supported_by_document": true
+      },
+      {
+        "id": "A2",
+        "question": "What are the three private IPv4 address ranges reserved by RFC 1918?",
+        "top_chunk_id": "chunk_011",
+        "top_similarity": 0.7452,
+        "expected_facts": [
+          "10.0.0.0/8 (10.0.0.0 to 10.255.255.255)",
+          "172.16.0.0/12 (172.16.0.0 to 172.31.255.255)",
+          "192.168.0.0/16 (192.168.0.0 to 192.168.255.255)"
+        ],
+        "retrieved_context_preview": "1). Thus, the number of assignable host interfaces on any subnet with h host bits is calculated as (2^h) - 2. To conserve public IPv4 address space, the Internet Engineering Task Force (IETF) reserved",
+        "generated_answer": "[API KEY REQUIRED FOR LIVE GENERATION - Retrieved context verified below]",
+        "supported_by_document": true
+      },
+      {
+        "id": "A3",
+        "question": "What algorithm does OSPF use to calculate the shortest path, and how is its metric cost determined?",
+        "top_chunk_id": "chunk_013",
+        "top_similarity": 0.5189,
+        "expected_facts": [
+          "Dijkstra's Shortest Path First (SPF) algorithm",
+          "Cost = Reference Bandwidth / Interface Bandwidth"
+        ],
+        "retrieved_context_preview": "direction). An illustrative example is the Routing Information Protocol (RIP). RIP relies on the Bellman-Ford algorithm and uses hop count as its sole metric, with a maximum allowable hop count of 15 ",
+        "generated_answer": "[API KEY REQUIRED FOR LIVE GENERATION - Retrieved context verified below]",
+        "supported_by_document": true
+      },
+      {
+        "id": "A4",
+        "question": "Explain the four steps of the DHCP client configuration lifecycle (the DORA process).",
+        "top_chunk_id": "chunk_015",
+        "top_similarity": 0.541,
+        "expected_facts": [
+          "Discover (DHCPDISCOVER)",
+          "Offer (DHCPOFFER)",
+          "Request (DHCPREQUEST)",
+          "Acknowledge (DHCPACK)"
+        ],
+        "retrieved_context_preview": "authoritative name servers managing specific registered second-level domains. When a client performs a recursive lookup, its local recursive resolver queries root servers, then TLD servers, and finall",
+        "generated_answer": "[API KEY REQUIRED FOR LIVE GENERATION - Retrieved context verified below]",
+        "supported_by_document": true
+      },
+      {
+        "id": "A5",
+        "question": "What are the two sublayers of the Data Link Layer, and what does each sublayer manage?",
+        "top_chunk_id": "chunk_003",
+        "top_similarity": 0.515,
+        "expected_facts": [
+          "MAC (Medium Access Control): physical addressing (48-bit MAC) and collision management",
+          "LLC (Logical Link Control): protocol multiplexing, flow control, CRC/FCS error detection"
+        ],
+        "retrieved_context_preview": "multi-mode fiber optics, and free-space electromagnetic radiation. The Protocol Data Unit (PDU) at Layer 1 is the bit. Layer 2 is the Data Link Layer. It provides node-to-node data transfer across an ",
+        "generated_answer": "[API KEY REQUIRED FOR LIVE GENERATION - Retrieved context verified below]",
+        "supported_by_document": true
+      }
+    ],
+    "unanswerable": [
+      {
+        "id": "U1",
+        "question": "What is the quantum key distribution protocol BB84 and how does it prevent eavesdropping using photon polarization?",
+        "topic": "Quantum Cryptography (BB84 protocol)",
+        "top_chunk_id": "chunk_017",
+        "top_similarity": 0.2949,
+        "strict_answer": "I don't know based on the provided context.",
+        "fallback_used": true
+      },
+      {
+        "id": "U2",
+        "question": "What were the quarterly revenue figures and stock market ticker symbol for Cisco Systems in fiscal year 2024?",
+        "topic": "Corporate Financials & Stock Market Data",
+        "top_chunk_id": "chunk_010",
+        "top_similarity": 0.1593,
+        "strict_answer": "I don't know based on the provided context.",
+        "fallback_used": true
+      },
+      {
+        "id": "U3",
+        "question": "How does the Bitcoin blockchain proof-of-work consensus algorithm dynamically adjust mining difficulty?",
+        "topic": "Cryptocurrency & Blockchain Consensus",
+        "top_chunk_id": "chunk_015",
+        "top_similarity": 0.1886,
+        "strict_answer": "I don't know based on the provided context.",
+        "fallback_used": true
+      }
+    ],
+    "before_after_comparison": [
+      {
+        "id": "U1",
+        "question": "What is the quantum key distribution protocol BB84 and how does it prevent eavesdropping using photon polarization?",
+        "before_grounding": "[Without grounding instruction, standard LLM answers using general training knowledge]",
+        "after_grounding": "I don't know based on the provided context.",
+        "fallback_adhered": true
+      },
+      {
+        "id": "U2",
+        "question": "What were the quarterly revenue figures and stock market ticker symbol for Cisco Systems in fiscal year 2024?",
+        "before_grounding": "[Without grounding instruction, standard LLM answers using general training knowledge]",
+        "after_grounding": "I don't know based on the provided context.",
+        "fallback_adhered": true
+      },
+      {
+        "id": "U3",
+        "question": "How does the Bitcoin blockchain proof-of-work consensus algorithm dynamically adjust mining difficulty?",
+        "before_grounding": "[Without grounding instruction, standard LLM answers using general training knowledge]",
+        "after_grounding": "I don't know based on the provided context.",
+        "fallback_adhered": true
+      }
+    ]
+  },
+  "timestamp": "2026-10-24 20:09:36"
+}
